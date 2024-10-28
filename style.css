@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --bg-url: url(./assets/bg-mobile.jpg);
+}
+
+body {
+    background: var(--bg-url) no-repeat top center/cover;
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: rgb(247, 247, 247);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o conteúdo do container */
+}
+
+input {
+    margin-bottom: 10px; /* Espaçamento entre inputs */
+    padding: 10px;
+    width: calc(100% - 20px); /* Ajusta a largura do input */
+    border: 1px solid #f8f1f1;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15 px; /* Espaçamento acima do botão */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+}
+

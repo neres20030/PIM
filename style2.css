@@ -1,0 +1,37 @@
+htemplate {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+:root
+{
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --strooke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(255, 255, 255, 0.02);
+    --highlit-color: rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url(./assets/moon-stars.svg);
+
+}
+
+ 
+    
+body
+{
+
+
+background: var(--bg-url) no-repeat top center/cover;
+
+}
+
+body * {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+
+
+}
