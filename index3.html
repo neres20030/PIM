@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Controle de Pragas</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Controle de Pragas</h1>
+
+        <!-- Formulário para adicionar pragas -->
+        <form id="pest-form">
+            <input type="text" id="pest-name" placeholder="Nome da praga" required>
+            <input type="text" id="location" placeholder="Local da praga" required>
+            <button type="submit">Registrar Praga</button>
+        </form>
+
+        <!-- Lista de pragas registradas -->
+        <h2>Pragas Registradas:</h2>
+        <ul id="pest-list"></ul>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>

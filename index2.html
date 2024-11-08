@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Vendas</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <!-- Barra Lateral de Navegação -->
+    <div class="sidebar">
+        <h2>Controle de Vendas</h2>
+        <ul>
+            <li><a href="#" onclick="showSection('vendedor')">Acesso do Vendedor</a></li>
+            <li><a href="#" onclick="showSection('frutas')">Frutas Cadastradas</a></li>
+            <li><a href="#" onclick="showSection('empresa')">Informações da Empresa</a></li>
+        </ul>
+    </div>
+
+    <!-- Área de Conteúdo Principal -->
+    <div class="content">
+        <!-- Seção de Acesso do Vendedor -->
+        <div id="vendedor" class="section">
+            <h2>Acesso do Vendedor</h2>
+            <p>Bem-vindo ao painel de vendas. Aqui o vendedor pode acessar as informações do sistema.</p>
+        </div>
+
+        <!-- Seção de Frutas Cadastradas -->
+        <div id="frutas" class="section" style="display:none;">
+            <h2>Frutas Cadastradas</h2>
+            <p>Lista de frutas cadastradas no sistema. O vendedor pode adicionar, editar ou remover frutas.</p>
+        </div>
+
+        <!-- Seção de Informações da Empresa -->
+        <div id="empresa" class="section" style="display:none;">
+            <h2>Informações da Empresa</h2>
+            <p>Detalhes sobre a empresa, missão, visão e outros dados relevantes.</p>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
