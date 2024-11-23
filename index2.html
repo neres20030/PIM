@@ -14,6 +14,7 @@
         <ul>
             <li><a href="#" onclick="showSection('vendedor')">Acesso do Vendedor</a></li>
             <li><a href="#" onclick="showSection('frutas')">Frutas Cadastradas</a></li>
+            <li><a href="#" onclick="showSection('pragas')">Pragas Cadastradas</a></li>
             <li><a href="#" onclick="showSection('empresa')">Informações da Empresa</a></li>
         </ul>
     </div>
@@ -29,15 +30,97 @@
         <!-- Seção de Frutas Cadastradas -->
         <div id="frutas" class="section" style="display:none;">
             <h2>Frutas Cadastradas</h2>
-            <p>Lista de frutas cadastradas no sistema. O vendedor pode adicionar, editar ou remover frutas.</p>
+            
+            <!-- Formulário de Cadastro de Frutas -->
+            <div class="form-container">
+                <h3>Cadastrar Fruta</h3>
+                <form id="fruitForm">
+                    <label for="fruitName">Nome da Fruta</label>
+                    <input type="text" id="fruitName" name="fruitName" required placeholder="Digite o nome da fruta">
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+
+            <!-- Lista de Frutas Cadastradas -->
+            <div id="fruitList" class="fruit-list">
+                <h3>Frutas Cadastradas:</h3>
+                <ul id="fruitItems">
+                    <!-- Lista de frutas será exibida aqui -->
+                </ul>
+            </div>
+
+            <!-- Botão de Envio para WhatsApp -->
+            <div>
+                <button id="sendToWhatsApp" style="display:none;">Enviar para WhatsApp</button>
+            </div>
+        </div>
+
+        <!-- Seção de Pragas Cadastradas -->
+        <div id="pragas" class="section" style="display:none;">
+            <h2>Pragas Cadastradas</h2>
+            
+            <!-- Lista de Pragas Cadastradas -->
+            <div id="pestList" class="pest-list">
+                <h3>Pragas Cadastradas:</h3>
+                <ul id="pestItems">
+                    <li>Lagarta-do-cartucho</li>
+                    <li>Percevejo-marrom</li>
+                    <li>Helicoverpa armigera</li>
+                    <li>Corós</li>
+                    <li>Mosca-branca</li>
+                    <li>Pulgões (afídeos)</li>
+                    <li>Larva minadora</li>
+                    <li>Ácaro rajado</li>
+                </ul>
+
+            <!-- Botão para linkar o Cadastro de Pragas -->
+<div>
+    <a href="paginainicial.html" class="green-btn-link">
+        <button class="green-btn">Cadastrar Nova Praga</button>
+    </a>
+</div>
+
+            </div>
         </div>
 
         <!-- Seção de Informações da Empresa -->
-        <div id="empresa" class="section" style="display:none;">
-            <h2>Informações da Empresa</h2>
-            <p>Detalhes sobre a empresa, missão, visão e outros dados relevantes.</p>
-        </div>
-    </div>
+        <!-- Seção de Informações da Empresa -->
+<div id="empresa" class="section" style="display:none;">
+    <h2>Informações da Empresa</h2>
+    
+    <p><strong>Bem-vindo à Fazenda Tamara!</strong></p>
+
+    <p>Fundada em 2024, a <strong>Fazenda Tamara</strong> é uma empresa dedicada a oferecer soluções inovadoras para o setor agrícola. Nosso objetivo é ser líder em tecnologia agrícola, oferecendo produtos e serviços que ajudam nossos parceiros a aumentar a produtividade e sustentabilidade das suas culturas.</p>
+
+    <h3>Missão</h3>
+    <p>A nossa missão é fornecer tecnologias de ponta para o agronegócio, focando em soluções que aumentem a eficiência e sustentabilidade das operações agrícolas. Acreditamos que a inovação deve estar ao alcance de todos os produtores, desde os pequenos agricultores até os grandes empreendimentos, para que todos possam crescer e prosperar com mais responsabilidade ambiental.</p>
+
+    <h3>Visão</h3>
+    <p>Ser reconhecida como a empresa de referência em soluções tecnológicas para o campo, promovendo uma agricultura mais inteligente, sustentável e rentável. Nosso compromisso é ser um parceiro de confiança para todos os agricultores, contribuindo para o avanço do setor agrícola com soluções que atendem às necessidades do presente e do futuro.</p>
+
+    <h3>Valores</h3>
+    <ul>
+        <li><strong>Inovação:</strong> Buscamos sempre novas formas de melhorar os processos agrícolas e de trazer soluções tecnológicas que impactem positivamente o setor.</li>
+        <li><strong>Sustentabilidade:</strong> Valorizamos práticas agrícolas sustentáveis, contribuindo para a preservação do meio ambiente e garantindo o uso responsável dos recursos naturais.</li>
+        <li><strong>Qualidade:</strong> Comprometemo-nos a oferecer produtos e serviços da mais alta qualidade, sempre alinhados às necessidades dos nossos clientes.</li>
+        <li><strong>Responsabilidade:</strong> Atuamos com ética, transparência e compromisso, buscando sempre ser uma empresa socialmente responsável e com impacto positivo nas comunidades onde operamos.</li>
+        <li><strong>Colaboração:</strong> Acreditamos que o trabalho em equipe, tanto internamente quanto com nossos parceiros, é essencial para o sucesso e inovação.</li>
+    </ul>
+
+    <h3>História da Empresa</h3>
+    <p>A história da <strong>Fazenda Tamara</strong> começou com uma simples ideia: tornar o agronegócio mais eficiente, sustentável e acessível. Em seus primeiros anos, a empresa se focou no desenvolvimento de tecnologias para o monitoramento de cultivos e controle de pragas, sempre com o objetivo de reduzir os custos operacionais dos agricultores.</p>
+    
+    <p>Hoje, a AgroTech Solutions é uma empresa de destaque no mercado, com uma gama de produtos que inclui sistemas de monitoramento por drones, sensores de solo e soluções de controle biológico de pragas. Nossa equipe é composta por engenheiros agrônomos, desenvolvedores de software e especialistas em inovação tecnológica, todos trabalhando para transformar o agronegócio por meio da tecnologia.</p>
+
+    <h3>Compromisso com o Futuro</h3>
+    <p>Nos próximos anos, nosso foco será expandir nossas operações para novos mercados, oferecendo soluções ainda mais avançadas e sustentáveis. Continuaremos a investir em pesquisa e desenvolvimento, para garantir que nossos clientes sempre tenham acesso ao que há de mais moderno em tecnologia agrícola.</p>
+
+    <p>Com nossa base de clientes em constante crescimento e a confiança de grandes nomes do setor, a Fazenda Tamara está mais preparada do que nunca para fazer a diferença no futuro da agricultura.</p>
+
+    <h3>Entre em Contato Conosco</h3>
+    <p>Se você deseja saber mais sobre nossos produtos e soluções ou fazer parte da nossa rede de clientes e parceiros, não hesite em nos contatar. Estamos sempre prontos para ajudar a sua empresa a alcançar novos patamares de sucesso!</p>
+</div>
+
 
     <script src="script2.js"></script>
 </body>

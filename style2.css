@@ -1,22 +1,22 @@
-/* Reset básico */
 body, h2, p {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background: url(assets/farm-desktop-ct4tnwgupjq73d1r.jpg);
 }
 
 /* Barra lateral fixa no desktop */
 .sidebar {
     width: 250px;
     height: 100vh;
-    background-color: #2c3e50;
-    color: white;
+    background: url(assets/farm-desktop-ct4tnwgupjq73d1r.jpg);
+    color: rgb(92, 56, 56);
     position: fixed;
     top: 0;
     left: 0;
     padding-top: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out; /* Transição para efeito no menu */
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Barra lateral visível em telas grandes */
@@ -24,6 +24,8 @@ body, h2, p {
     text-align: center;
     font-size: 24px;
     margin-bottom: 30px;
+    background: #2c3e50;
+    color: #ddd;
 }
 
 .sidebar ul {
@@ -34,18 +36,18 @@ body, h2, p {
 .sidebar ul li {
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid #34495e;
+    border-bottom: 1px solid #4a6e92;
 }
 
 .sidebar ul li a {
-    color: white;
+    color: rgb(250, 250, 250);
     text-decoration: none;
     font-size: 18px;
     display: block;
 }
 
 .sidebar ul li a:hover {
-    background-color: #34495e;
+    background-color: #394047;
 }
 
 /* Estilo para o conteúdo principal */
@@ -61,120 +63,101 @@ h2 {
 }
 
 .section {
-    display: none; /* Todas as seções começam escondidas */
+    display: none;
 }
 
 #vendedor {
-    display: block; /* A seção inicial é a do vendedor */
+    display: block;
 }
 
-/* Estilos para dispositivos móveis */
-@media (max-width: 768px) {
-    /* Barra lateral em telas pequenas */
-    .sidebar {
-        transform: translateX(-250px); /* Esconde a barra lateral inicialmente */
-    }
-
-    .sidebar.active {
-        transform: translateX(0); /* Mostra a barra lateral quando ativa */
-    }
-
-    /* Menu hamburger */
-    .sidebar h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-
-    .sidebar ul li a {
-        font-size: 16px;
-    }
-
-    .content {
-        margin-left: 0; /* Ajusta o conteúdo para usar toda a largura da tela */
-        padding: 10px;
-    }
-
-    /* Adiciona um botão de menu (hamburger) */
-    .menu-toggle {
-        display: block;
-        background-color: #2c3e50;
-        color: white;
-        font-size: 24px;
-        padding: 10px;
-        cursor: pointer;
-        text-align: center;
-    }
-
-    /* Ajusta a visibilidade das seções */
-    .section {
-        display: block; /* Exibe as seções no mobile */
-    }
+.form-container {
+    margin-bottom: 30px;
 }
 
-/* Resetando a imagem de fundo para o mobile */
-:root {
-    --bg-url: url(./assets/bg-mobile-light.jpg);
-}
-
-body {
-    background: var(--bg-url) no-repeat top center/cover;
-    font-family: "Inter", sans-serif;
-    color: var(--text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-body h2 {
-    padding: 33px;
-}
-
-body input {
-    padding: 10px;
-    border: 1px solid rgb(17, 0, 255);
-}
-
-.login-container {
-    background: rgb(247, 247, 247);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-input {
+.form-container h3 {
+    font-size: 20px;
     margin-bottom: 10px;
-    padding: 10px;
-    width: calc(100% - 20px);
-    border: 1px solid #f8f1f1;
-    border-radius: 4px;
 }
 
-button {
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input {
     padding: 10px;
     width: 100%;
-    background-color: #007BFF;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.form-container button {
+    padding: 10px 15px;
+    background-color: #27ae60;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 15px;
 }
 
-button:hover {
-    background-color: #959799;
+.form-container button:hover {
+    background-color: #2ecc71;
 }
 
-/* Responsividade para tablets e smartphones */
-@media (max-width: 700px) {
-    :root {
-        --bg-url: url(./assets/bg-mobile-light.jpg);
+.fruit-list h3 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.fruit-list ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.fruit-list ul li {
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-250px);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .section {
+        display: block;
     }
 }
 
-body .sidebar {
-    background: url(./assets/bg-mobile-light.jpg);
+/* Estilo do botão verde */
+.green-btn {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
+.green-btn:hover {
+    background-color: #45a049; /* Tom de verde mais escuro ao passar o mouse */
+}
 
+/* Estilo do link para o botão */
+.green-btn-link {
+    text-decoration: none; /* Remove o sublinhado do link */
+}
