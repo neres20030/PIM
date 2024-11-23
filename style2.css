@@ -2,14 +2,14 @@ body, h2, p {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: url(assets/farm-desktop-ct4tnwgupjq73d1r.jpg);
+    background: url();
 }
 
 /* Barra lateral fixa no desktop */
 .sidebar {
     width: 250px;
     height: 100vh;
-    background: url(assets/farm-desktop-ct4tnwgupjq73d1r.jpg);
+    background: url();
     color: rgb(92, 56, 56);
     position: fixed;
     top: 0;
@@ -40,7 +40,7 @@ body, h2, p {
 }
 
 .sidebar ul li a {
-    color: rgb(250, 250, 250);
+    color: rgb(12, 11, 11);
     text-decoration: none;
     font-size: 18px;
     display: block;
@@ -95,7 +95,7 @@ h2 {
 .form-container button {
     padding: 10px 15px;
     background-color: #27ae60;
-    color: white;
+    color: rgb(175, 133, 133);
     border: none;
     border-radius: 4px;
     cursor: pointer;
