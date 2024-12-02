@@ -26,6 +26,20 @@ document.getElementById('fruitForm').addEventListener('submit', function(event) 
 
         // Atualiza a lista de frutas exibida
         displayFruits();
+
+        // Enviar dados para o servidor
+        fetch('http://localhost:3000/cadastrar-fruta', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ nome: fruitName })
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data);  // Exibe uma mensagem de sucesso
+        })
+        .catch(error => console.error('Erro:', error));
     }
 });
 
@@ -60,3 +74,29 @@ document.getElementById('sendToWhatsApp').addEventListener('click', function() {
     // Abre o link do WhatsApp
     window.open(whatsappLink, '_blank');
 });
+
+// Carregar frutas cadastradas
+fetch('http://localhost:3000/frutas')
+    .then(response => response.json())
+    .then(data => {
+        const fruitItems = document.getElementById('fruitItems');
+        fruitItems.innerHTML = '';
+        data.forEach(fruta => {
+            const li = document.createElement('li');
+            li.textContent = fruta.nome;
+            fruitItems.appendChild(li);
+        });
+    });
+
+// Carregar pragas cadastradas
+fetch('http://localhost:3000/pragas')
+    .then(response => response.json())
+    .then(data => {
+        const pestItems = document.getElementById('pestItems');
+        pestItems.innerHTML = '';
+        data.forEach(praga => {
+            const li = document.createElement('li');
+            li.textContent = praga.nome;
+            pestItems.appendChild(li);
+        });
+    });
