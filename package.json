@@ -1,24 +1,24 @@
 {
-  "name": "pim",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "login.js",
+  "main": "index.js",
+  "license": "MIT",
+  "node": "20.x",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/neres20030/PIM.git"
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/neres20030/PIM/issues"
-  },
-  "homepage": "https://github.com/neres20030/PIM#readme",
   "dependencies": {
     "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
     "express": "^4.21.1",
-    "mongoose": "^8.8.3"
+    "googleapis": "^95.0.0",
+    "mongoose": "^8.8.3",
+    "multer": "^1.4.5-lts.1"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }

@@ -57,6 +57,7 @@ body, h2, p {
 
 }
 
+
 h2 {
     text-align: center;
     font-size: 24px;
@@ -98,7 +99,7 @@ h2 {
 .form-container button {
     padding: 10px 15px;
     background-color: #27ae60;
-    color: rgb(175, 133, 133);
+    color: rgb(245, 241, 241);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -165,3 +166,22 @@ h2 {
     text-decoration: none; /* Remove o sublinhado do link */
 }
 
+#container {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 30px; /* Espaçamento de 30px entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens se ajustem em telas menores */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.profile {
+    text-align: center; /* Centraliza o texto abaixo das imagens */
+}
+
+.profile img {
+    width: 150px; /* Define o tamanho das imagens */
+    height: 150px;
+    border-radius: 50%; /* Torna as imagens circulares */
+    object-fit: cover; /* Garante que as imagens não fiquem deformadas */
+    margin-bottom: 10px; /* Espaço entre a imagem e o nome */
+}
